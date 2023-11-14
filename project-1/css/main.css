@@ -1,0 +1,162 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.container {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 24px;
+    background-color: white;
+    max-width: 690px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.text {
+    margin: 0;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+.img {
+    border-radius: 24px;
+}
+.title {
+    display: block;
+    max-width: 240px;
+    width: 100%;
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.info {
+    width: 400px;
+
+}
+
+.desc {
+    display: block;
+    max-width: 240px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+.price-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+
+.price-item {
+    color: hsl(158, 36%, 37%);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.price-item:nth-child(2){
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.price-amount{
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    max-width: 240px;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 0;
+    border: transparent;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+}
+
+.button::before {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-image: url("../images/icon-cart.svg");
+    background-repeat: no-repeat;
+    content: "";
+    left:   65px;
+}
+
+
+@media only screen and (max-width:576px) {
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .info {
+        padding: 40px 30px;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin-top: -50px;
+
+    }
+}
+
+
