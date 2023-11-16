@@ -1,0 +1,185 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:  hsl(0, 0%, 98%);
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.cards__container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 150px;
+}
+
+
+.cards__title {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.cards__span{
+   color: hsl(234, 12%, 34%);
+   font-weight: 800;
+   margin-bottom: 40px;
+}
+
+.cards__text{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    max-width: 600px;
+    width: 100%;
+    color:  hsl(229, 6%, 66%);
+    text-align: center;
+    font-size: 18px;
+}
+
+.cards__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cards__item {
+    position: relative;
+    max-width: 380px;
+    padding: 30px;
+    background-color: white;
+    border-top: 7px solid hsl(180, 62%, 55%);
+    border-radius: 24px;
+}
+
+.cards__item::after{
+    position: absolute;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/icon-supervisor.svg);
+    background-repeat: no-repeat;
+    content: "";
+    right: 30px;
+    bottom: 20px;
+}
+
+.cards__item:nth-child(3)::after{
+    background-image: url(../images/icon-calculator.svg);
+   
+}
+
+.cards__item:nth-child(2)::after{
+    display: none;
+   
+}
+
+.cards__item:nth-child(3){
+    border-top: 7px solid hsl(212, 86%, 64%);
+}
+
+.cards__item:nth-child(2){
+    padding: 0;
+    border-top: 0 solid #000;
+}
+
+.cards__item:nth-child(2){
+    background-color: hsl(0, 0%, 98%);
+}
+
+.cards__sublist{
+    width: 380px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cards__subitem{
+    background-color: white;
+    padding: 30px;
+    height: 300px;
+    margin-left: -30px;
+    border-radius: 24px;
+}
+
+.cards__subtitle{
+    color: hsl(234, 12%, 34%);
+   font-weight: 800;
+   font-size: 20px;
+   margin-bottom: 20px;
+}
+
+.cards__info{
+    margin: 0;
+    color:  hsl(229, 6%, 66%);
+    margin-bottom: 100px;
+    font-size: 15px;
+}
+
+.cards__subitem:nth-child(1){
+    border-top: 7px solid hsl(0, 78%, 62%);
+}
+
+.cards__subitem:nth-child(2){
+    border-top: 7px solid  hsl(34, 97%, 64%);
+}
+
+
+.cards__subitem:nth-child(1):after{
+    position: absolute;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/icon-team-builder.svg);
+    background-repeat: no-repeat;
+    content: "";
+    right: 30px;
+    bottom: 360px;
+}
